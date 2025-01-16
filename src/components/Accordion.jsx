@@ -30,13 +30,11 @@ const Accordion = () => {
     <div className="md:mt-36 mt-20">
 
       <div className=' text-center'>
-        <span className='text-sky-600 text-sm  py-5 font-semibold'>FAQ</span>
-        <h1 className='text-4xl md:text-5xl font-bold text-gray-700'>
+        <span className='text-sky-600 text-sm  py-5 font-bold'>FAQ</span>
+        <h1 className='text-4xl md:text-7xl font-bold text-gray-900'>
           Frequently Asked Questions
         </h1>
       </div>
-
-
 
       <div className="max-w-3xl mx-auto p-4 pt-10 md:pt-20">
         {accordionData.map((item, index) => (

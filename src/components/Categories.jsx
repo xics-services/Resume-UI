@@ -8,8 +8,8 @@ function Categories() {
         <div className='md:mt-36 mt-36'>
 
             <div className=' text-center'>
-                <span className='text-sky-600 text-sm  py-5 font-semibold'>CATEGORIES</span>
-                <h1 className='text-3xl md:text-5xl mt-5 font-bold text-gray-700'>
+                <span className='text-sky-600 text-sm  py-5 font-bold'>CATEGORIES</span>
+                <h1 className='text-3xl md:text-7xl mt-5 font-bold text-gray-900'>
                     Get Inspired by Resume <span className='block md:pt-2'>Samples from Various Industry </span>
                 </h1>
             </div>
@@ -74,7 +74,7 @@ function Categories() {
             </div>
 
             <div className="mt-8 flex justify-center items-center">
-                <button className="px-3 py-3 text-white font-bold text-xs bg-blue-400 border-2 rounded-3xl shadow-md hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                <button className="px-5 py-5 text-white font-bold text-sm bg-blue-500 border-2 rounded-full shadow-md hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                     Explore All Samples
                 </button>
 

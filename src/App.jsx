@@ -9,8 +9,8 @@ import Carousel from './components/Carousel'
 import Categories from './components/Categories'
 import Accordion from './components/Accordion'
 import Footer from './components/Footer'
-
-
+import Login from './authentication/Login'
+import Register from './authentication/Register'
 
 const App = () => {
   return (
@@ -29,5 +29,5 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
 

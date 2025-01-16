@@ -35,8 +35,8 @@ const Carousel = () => {
     <div className="py-3 mt-24 px-3 bg-gray-100 md:mt-40">
 
       <div className=' text-center'>
-        <span className='text-sky-600 text-sm  py-5 font-semibold'>OPTIMIZED DESIGNS</span>
-        <h1 className='text-3xl md:text-5xl md:mt-5 font-bold text-gray-700'>
+        <span className='text-sky-600 text-sm  py-5 font-bold'>OPTIMIZED DESIGNS</span>
+        <h1 className='text-3xl md:text-7xl md:mt-5 font-bold text-gray-900'>
           Make Your Resume with <span className='block md:pt-2'> Proven Professional Templates. </span>
         </h1>
         <div className='text-gray-500 '>

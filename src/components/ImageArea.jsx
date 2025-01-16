@@ -4,8 +4,8 @@ function ImageArea() {
     return (
         <div>
             <div className=' text-center'>
-                <span className='text-sky-600 text-sm  py-5 font-semibold'>FEATURES</span>
-                <h1 className='text-3xl md:text-5xl font-bold text-gray-700'>
+                <span className='text-sky-600 text-sm  py-5 font-bold'>FEATURES</span>
+                <h1 className='text-3xl md:text-7xl font-bold text-gray-900'>
                     Quick, Easy & Flexible <span className='block md:pt-2'>Editing with Live Preview </span>
                 </h1>
             </div>
@@ -30,7 +30,7 @@ function ImageArea() {
             </div>
 
             <div className="mt-5 flex justify-center items-center">
-                <button className="px-3 py-3 text-white font-bold text-xs bg-blue-400 border-2 rounded-3xl shadow-md hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
+                <button className="px-5 py-5 text-white font-bold text-sm bg-blue-500 border-2 rounded-full shadow-md hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2">
                     Edit your resume
                 </button>
 
