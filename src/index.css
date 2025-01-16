@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.another-section {
+    background-image: url(https://cdn.dribbble.com/userupload/6759297/file/original-11f78b8e47fade2aa48b6d0f7b6a557a.jpg?resize=1024x768&vertical=center);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
