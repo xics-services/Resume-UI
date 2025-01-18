@@ -31,7 +31,7 @@ const Accordion = () => {
 
       <div className=' text-center'>
         <span className='text-sky-600 text-sm  py-5 font-bold'>FAQ</span>
-        <h1 className='text-4xl md:text-7xl font-bold text-gray-900'>
+        <h1 className='title text-4xl md:text-7xl font-bold text-black'>
           Frequently Asked Questions
         </h1>
       </div>

@@ -67,7 +67,7 @@ function Login() {
                         <button
                             onClick={handleSubmit}
                             type="submit"
-                            className="w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
+                            className="w-full px-4 py-2 text-white bg-sky-500 rounded-lg hover:bg-sky-600 focus:outline-none focus:ring focus:ring-blue-300">
                             Login
                         </button>
                     </form>

@@ -5,7 +5,7 @@ function ImageArea() {
         <div>
             <div className=' text-center'>
                 <span className='text-sky-600 text-sm  py-5 font-bold'>FEATURES</span>
-                <h1 className='text-3xl md:text-7xl font-bold text-gray-900'>
+                <h1 className='title text-3xl md:text-7xl font-bold text-black'>
                     Quick, Easy & Flexible <span className='block md:pt-2'>Editing with Live Preview </span>
                 </h1>
             </div>

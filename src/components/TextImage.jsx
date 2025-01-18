@@ -12,7 +12,7 @@ function TextImage() {
 
             <div className="text-left md:text-left sm:text-left px-4 py-4 md:px-20 md:pt-40 md:ml-20" >
                         <h1 className=' text-sky-500 font-bold sm:mt-4'>TIPS</h1>
-                        <h1 className="mt-10 text-left  leading-tight tracking-wide font-bold md:pb-5 text-gray-900 text-3xl md:text-6xl">
+                        <h1 className="title mt-10 text-left  leading-tight tracking-wide font-bold md:pb-5 text-black text-3xl md:text-6xl">
                            Get the Advantage with Writing Tips
                         </h1>
                         <div className=' md:w-80'>

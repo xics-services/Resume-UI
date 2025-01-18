@@ -9,7 +9,7 @@ function Categories() {
 
             <div className=' text-center'>
                 <span className='text-sky-600 text-sm  py-5 font-bold'>CATEGORIES</span>
-                <h1 className='text-3xl md:text-7xl mt-5 font-bold text-gray-900'>
+                <h1 className='title text-3xl md:text-7xl mt-5 font-bold text-black'>
                     Get Inspired by Resume <span className='block md:pt-2'>Samples from Various Industry </span>
                 </h1>
             </div>

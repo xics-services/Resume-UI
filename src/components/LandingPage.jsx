@@ -16,7 +16,7 @@ const LandingPage = () => {
                             THE <span className='animate-pluse text-sky-600'>#1</span> RESUME BUILDER
                         </span>
 
-                        <h1 className="mt-10 md:mt-10 text-left leading-tight tracking-wide text-gray-900 font-bold text-4xl md:text-6xl md:pl-20">
+                        <h1 className="title mt-10 md:mt-10 text-left font-Heebo leading-tight tracking-wide text-black font-bold text-4xl md:text-6xl md:pl-20">
                             Create a Job-Ready Resume in Minutes
                         </h1>
                     </div>
