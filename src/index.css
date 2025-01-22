@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.another-section {
-    background-image: url(images/pic2.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-   
-}
 
 .title {
     font-family: "Heebo", serif;

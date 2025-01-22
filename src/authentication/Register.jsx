@@ -1,12 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 function Register() {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [role, setRole] = useState('');
     const [password, setPassword] = useState('');
 
@@ -17,6 +16,7 @@ function Register() {
         const registerInfo = {
             userName: name,
             userId: email,
+            userPhone: phone,
             userRole: role,
             userPassword: password
         }
@@ -64,17 +64,36 @@ function Register() {
 
                         <div>
                             <label
+                                htmlFor="number"
+                                className="block text-sm font-medium text-gray-600">
+                                Phone No
+                            </label>
+                            <input
+                                onChange={(e) => setPhone(e.target.value)}
+                                type="number"
+                                id="number"
+                                className="w-full px-4 py-2 mt-1 text-gray-800 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Enter your Phone no"
+                            />
+                        </div>
+
+                        <div>
+                            <label
                                 htmlFor="name"
                                 className="block text-sm font-medium text-gray-600">
                                 Your Role
                             </label>
-                            <input
+                            <select
                                 onChange={(e) => setRole(e.target.value)}
                                 type="text"
                                 id="name"
                                 className="w-full px-4 py-2 mt-1 text-gray-800 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 placeholder="Enter your role"
-                            />
+                            >
+                                <option value="">Choose your role</option>
+                                <option value="Recruiter">Recruiter</option>
+                                <option value="Job Seeker">Job Seeker</option>
+                            </select>
                         </div>
 
                         <div>
@@ -91,9 +110,9 @@ function Register() {
                                 placeholder="Enter your password"
                             />
                         </div>
-                        
+
                         <div>
-                        {/* email login button */}
+                            {/* email login button */}
                             <button
                                 onClick={handleSave}
                                 type="submit"
@@ -101,13 +120,13 @@ function Register() {
                                 Register
                             </button>
 
-                           {/* google login button */}
+                            {/* google login button */}
                             <button
                                 onClick={handleSave}
                                 type="submit"
                                 className="w-full h-10 font-bold px-2 py-2 mt-3 text-gray-700 border-2 border-sky-500 bg-white rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                               <img className='w-6 md:relative left-32 md:rounded-3xl' src='\src\images\google-icon.png' alt='img' /> 
-                            <span className=' relative bottom-6 pl-2'>Google</span> 
+                                <img className='w-6 md:relative left-32 md:rounded-3xl' src='\src\images\google-icon.png' alt='img' />
+                                <span className=' relative bottom-6 pl-2'>Google</span>
                             </button>
 
                         </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShare } from '@fortawesome/free-solid-svg-icons';
 
 function FrontPicture() {
     return (
@@ -10,6 +12,28 @@ function FrontPicture() {
                     src="\src\images\pic2.jpg"
                     alt='img' />
 
+
+                 {/* left card */}
+                 <div className="bg-white hidden sm:block text-center absolute left-72 top-full shadow-2xl rounded-lg  w-80 md:w-64">
+                    <div>
+                   
+                        <h3 className="text-md pt-5 font-semibold text-gray-800">
+                         <img className='w-8 relative rounded-3xl mx-2' src='https://static.vecteezy.com/system/resources/previews/024/183/502/non_2x/male-avatar-portrait-of-a-young-man-with-a-beard-illustration-of-male-character-in-modern-color-style-vector.jpg' alt='img' />
+                        <span className=' relative bottom-8'>
+                            Your Resume Website
+                        </span> 
+                        </h3>
+                        
+         
+                        <p className="text-gray-500 text-sm font-semibold py-2">
+                        <FontAwesomeIcon className="text-sky-600  px-2" icon={faShare} size="sm" />
+                        Share
+                        </p>
+                    </div>
+
+                </div>
+                 {/* end of left card */}
+
                 <div className='absolute left-20 px-5 w-96 hidden sm:block'>
 
                     <div className='flex absolute top-48'>
@@ -18,10 +42,10 @@ function FrontPicture() {
                         <img className='w-9 rounded-3xl' src='https://img.freepik.com/premium-vector/3d-smiling-women-avatar-happy-face-icon-character-vector_313242-1220.jpg' alt='img' />
                     </div>
 
-                    <h1 className=' text-gray-500 md:text-sm md:absolute top-60'>Deny, intan and <span className='text-sky-600 font-semibold'>hundreds of thousands</span> of other peoples have succeeeded get hired and accelerating their careers with Pix Resume</h1>
+                    <h1 className=' text-gray-600 md:text-sm md:absolute top-60'>Deny, intan and <span className='text-sky-600 font-semibold'>hundreds of thousands</span> of other peoples have succeeeded get hired and accelerating their careers with Pix Resume</h1>
                 </div>
 
-                {/* card */}
+                {/* right card */}
                 <div className="bg-white hidden sm:block text-center absolute right-28 top-full shadow-2xl rounded-lg  w-80 md:w-64">
                     <div>
                         <h3 className="text-2xl pt-5 font-bold text-gray-800">Dream Job</h3>
