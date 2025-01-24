@@ -334,13 +334,6 @@ function ResumeBuilder() {
             text = "enter your hobbies"
           />
 
-           {/* awards */}
-           <SingleInputDropdown 
-            heading = "Hobbies"
-            textAlign = " relative right-16"
-            text = "enter your hobbies"
-          />
-
         </div>
 
 
