@@ -31,6 +31,7 @@ function Login() {
                                 Email
                             </label>
                             <input
+                               
                                 onChange={(e) => setEmail(e.target.value)}
                                 type="email"
                                 id="email"

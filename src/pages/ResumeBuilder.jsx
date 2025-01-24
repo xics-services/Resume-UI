@@ -1,9 +1,20 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
+import '@fontsource/montserrat';
+import '@fontsource/inter';
+import InputFieldDropdown from '../components/InputFieldDropdown';
+import SingleInputDropdown from '../components/SingleInputDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAlignCenter, faAlignJustify, faAlignLeft, faAlignRight, faArrowPointer, faArrowsToEye, faB, faBorderAll, faBriefcase, faChartSimple, faCircleMinus, faCirclePlus, faFile, faFileArrowUp, faFileDownload, faFilePdf, faGear, faGraduationCap, faGripLines, faI, faPencil, faPrint, faRotateLeft, faRotateRight, faS, faShare, faSquare, faU, faWandMagicSparkles, faWindowMaximize } from "@fortawesome/free-solid-svg-icons"
+import { faAlignCenter, faAlignJustify, faAlignLeft, faAlignRight, faArrowPointer, faArrowsLeftRightToLine, faArrowsToEye, faB, faBorderAll, faBriefcase, faChartSimple, faCircleMinus, faCirclePlus, faFile, faFileArrowUp, faFileDownload, faFilePdf, faGear, faGraduationCap, faGripLines, faI, faItalic, faPencil, faPrint, faRotateLeft, faRotateRight, faS, faShare, faSquare, faU, faUnderline, faWandMagicSparkles, faWindowMaximize } from "@fortawesome/free-solid-svg-icons"
 import { faGripVertical } from '@fortawesome/free-solid-svg-icons/faGripVertical';
-import { faCircleDown, faCircleUp, faHand } from '@fortawesome/free-regular-svg-icons';
+import { faCircleDown, faCircleUp, faEye, faHand } from '@fortawesome/free-regular-svg-icons';
+
+import { CiAlignLeft, CiAlignCenterH, CiAlignRight, CiAlignTop, CiAlignCenterV, CiAlignBottom, CiCirclePlus, CiCircleMinus, CiEdit, } from "react-icons/ci";
+import { VscLayoutSidebarLeft, VscLayoutPanel, VscLayoutSidebarRight } from "react-icons/vsc";
+import { TfiRulerPencil } from "react-icons/tfi";
+import { PiGearSix } from "react-icons/pi";
+import { IoArrowDownCircleOutline, IoArrowUpCircleOutline } from "react-icons/io5";
+import { RiArrowGoForwardLine, RiArrowGoBackLine } from "react-icons/ri";
+import { MdOutlineHorizontalRule } from "react-icons/md";
 
 
 
@@ -18,7 +29,7 @@ function ResumeBuilder() {
       {/* navigation panel */}
       <div className=' py-1'>
 
-        <div className='mx-5 bg-white'>
+        <div className='mx-5 bg-white border-b-2 border-gray-300'>
           <h1 className='text-md font-bold relative top-5'>
             <span className='text-blue-500 text-lg '>Pix </span>Resume
           </h1>
@@ -26,12 +37,12 @@ function ResumeBuilder() {
           <div className='flex justify-center gap-5 relative bottom-2 left-10'>
 
             <div className=' relative right-12 top-1 gap-5'>
-              <button>
-                <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faCircleUp} />
+              <button className='text-gray-400  relative top-1 px-2'>
+                <IoArrowUpCircleOutline size={18} />
               </button>
 
-              <button>
-                <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faCircleDown} />
+              <button className='text-gray-400 relative top-1 px-2'>
+                <IoArrowDownCircleOutline size={18} />
               </button>
 
               <button className='text-sm font-semibold bg-gray-100 py-1 text-gray-400 px-4 rounded-lg'>
@@ -48,20 +59,20 @@ function ResumeBuilder() {
               <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faHand} />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faRotateLeft} />
+            <button className='text-gray-500 hover:text-blue-500'>
+              <RiArrowGoBackLine />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faRotateRight} />
+            <button className='text-gray-500 hover:text-blue-500'>
+              <RiArrowGoForwardLine />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faCircleMinus} />
+            <button className='hover:text-blue-500 text-gray-600'>
+              <CiCircleMinus size={20} />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faCirclePlus} />
+            <button className='hover:text-blue-500 text-gray-600'>
+              <CiCirclePlus size={20} />
             </button>
 
             <button className='text-sm font-semibold bg-gray-100 py-1 text-gray-400 px-4 rounded-lg'>
@@ -89,16 +100,38 @@ function ResumeBuilder() {
         </div>
       </div>
 
+
       {/* resume edit section */}
-     <div className='grid grid-cols-4 gap-2 mt-5 mx-auto'>
+      <div className='flex-1 grid grid-cols-5  gap-2  '>
+
+        {/* sidebard*/}
+
+        <div className=' w-20 mx-5 px-4 border-r-2 border-gray-300 gap-3'>
+
+          <div className='mt-32 '>
+            <button className='text-gray-500 px-2 py-2 my-3'>
+              <CiEdit size={25} />
+            </button>
+
+            <button className='text-white bg-blue-500 shadow-lg shadow-blue-300 rounded-lg px-3 py-3 my-3'>
+              <TfiRulerPencil size={20} />
+            </button>
+
+            <button className='text-gray-500 px-2 py-2 my-3'>
+              <PiGearSix size={25} />
+            </button>
+          </div>
+
+        </div>
+
 
         {/* left section */}
-        <div className=' '>
-          <h1 className='font-bold mr-24 mt-3 text-lg text-center'>
-            Coustomize
+        <div className='relative right-44'>
+          <h1 className='font-bold font-inter w-28 mt-3 title text-xl text-center'>
+            Customize
           </h1>
 
-          <div className=' w-72 px-1 mt-5 rounded-md py-1 mt ml-20 bg-gray-100'>
+          <div className='w-72  px-1 mt-5 rounded-md py-1 mt bg-gray-100'>
 
             <button className='px-10 text-xs font-bold py-3 bg-white rounded-md'>
               <FontAwesomeIcon className="text-blue-500 px-2" icon={faFile} size="lg" />
@@ -106,71 +139,56 @@ function ResumeBuilder() {
             </button>
 
             <button className='px-5 py-2 text-xs font-bold text-gray-500'>
+
               <FontAwesomeIcon className="text-gray-500 px-2" icon={faBorderAll} size="lg" />
               Templates
             </button>
           </div>
 
           {/* horizontal line */}
-          <div className=' w-72 ml-20 mt-5'>
+          <div className=' w-72 mt-5'>
             <hr className='border-2 border-gray-200' />
           </div>
 
-          {/* feature navigation button */}
-
-          <div className='grid grid-cols-1 w-16 gap-3'>
-
-            <button className='px-1 py-3 mx-2  rounded-lg '>
-              <FontAwesomeIcon className="text-gray-500 px-2" icon={faPencil} size="lg" />
-            </button>
-
-            <button className='px-1 py-3 mx-2 shadow-lg shadow-blue-300 bg-blue-500 rounded-lg '>
-              <FontAwesomeIcon className=" px-2 text-white" icon={faWindowMaximize} size='lg' />
-            </button>
-
-            <button className='px-1 py-3 mx-2  rounded-lg '>
-              <FontAwesomeIcon className="text-gray-500 px-2" icon={faGear} size="lg" />
-            </button>
-          </div>
 
           {/* layout area */}
-          <div className='mt-8 relative bottom-44'>
-            <h1 className='font-bold text-lg text-center mr-32 '>Layout</h1>
+          <div className='mt-8'>
+            <h1 className='font-bold text-lg font-inter text-center w-16 '>Layout</h1>
 
-            <div className=' ml-20 mt-4'>
+            <div className=' mt-4'>
 
 
-              <button className='px-1 py-3 mx-2 border-2 border-blue-300 rounded-lg '>
-                <FontAwesomeIcon className="text-blue-500 px-2" icon={faWindowMaximize} size="2xl" />
+              <button className='px-1 mx-2 py-1 border-2 border-blue-300 text-blue-500 rounded-lg'>
+                <VscLayoutPanel size={38} />
               </button>
 
-              <button className='px-1 py-3 mx-2 border-2 border-gray-300 rounded-lg hover:border-blue-300 '>
-                <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faWindowMaximize} size="2xl" />
+              <button className='px-1 mx-2 py-1 border-2 border-gray-300 text-gray-500 hover:text-blue-500 hover:border-blue-300 rounded-lg'>
+                <VscLayoutSidebarLeft size={38} />
               </button>
 
-              <button className='px-1 mx-2 py-3 border-2 border-gray-300 hover:border-blue-300 rounded-lg'>
-                <FontAwesomeIcon className="text-gray-500 hover:text-blue-500 px-2" icon={faWindowMaximize} size="2xl" />
+              <button className='px-1 mx-2 py-1 border-2 border-gray-300 text-gray-500 hover:text-blue-500 hover:border-blue-300 rounded-lg'>
+                <VscLayoutSidebarRight size={38} />
               </button>
 
               <div className='mt-2'>
                 <span className='text-xs ml-6 font-bold'>Top</span>
-                <span className='text-xs ml-14 text-gray-500 font-bold'>Left</span>
-                <span className='text-xs ml-12 text-gray-500 font-bold'>Right</span>
+                <span className='text-xs ml-10 text-gray-500 font-bold'>Left</span>
+                <span className='text-xs ml-10 text-gray-500 font-bold'>Right</span>
               </div>
 
             </div>
           </div>
 
-         {/* horizonal line */}
-          <div className=' w-72 ml-20 mt-8 relative bottom-44'>
+          {/* horizonal line */}
+          <div className=' w-72  mt-8'>
             <hr className='border-2 border-gray-200' />
           </div>
 
           {/* column area */}
-          <div className='mt-6 relative bottom-44'>
-            <h1 className='font-bold text-lg text-center pr-32 mb-2'>Column</h1>
+          <div className='mt-6 '>
+            <h1 className='font-bold text-lg font-inter text-center w-20 mb-2'>Column</h1>
 
-            <div className=' ml-20 mt-4'>
+            <div className='  mt-4'>
 
               <button className='px-1 py-3 mx-2 border-2 hover:border-blue-500 border-gray-300 rounded-lg '>
                 <FontAwesomeIcon className="hover:text-blue-500 text-gray-500 px-2" icon={faGripLines} size="2xl" />
@@ -188,25 +206,25 @@ function ResumeBuilder() {
 
             </div>
 
-            <div className='mt-8 text-center mr-6'>
+            <div className='mt-8 ml-5 text-center mr-6'>
 
-              <span className='text-xs font-semibold relative right-10 top-3'>Left</span>
-              <span className='text-xs font-black text-gray-400  relative top-9 right-16'>80%</span>
+              <span className='text-xs font-semibold relative right-24 top-3'>Left</span>
+              <span className='text-xs font-black text-gray-400  relative top-9 right-28'>80%</span>
               <span className='text-xs font-semibold relative left-28 top-3'>Right</span>
               <span className='text-xs font-black top-9 text-gray-400 relative left-20 '>20%</span>
 
               <div>
-                <div className=' w-56 pb-5 ml-20 relative bottom-9'>
+                <div className=' w-72  pb-5  relative bottom-9 right-5'>
                   <label
                     htmlFor="default-range"
-                    className="block text-xs py-1 font-semibold relative right-16 pr-2 mb-2">
+                    className="block text-xs py-1 font-semibold  w-20   mb-2">
                     Column Width
                   </label>
                   <input
                     id="default-range"
                     type="range"
                     defaultValue="80"
-                    className="w-full h-1 bg-gray-200 rounded-lg  dark:bg-blue-500"
+                    className="w-72 h-1 bg-gray-200 rounded-lg  dark:bg-blue-500"
                   />
                 </div>
 
@@ -217,17 +235,17 @@ function ResumeBuilder() {
           </div>
 
           {/* horizonal line */}
-          <div className=' w-72 ml-20 mt-1 relative bottom-44'>
+          <div className=' w-72  mt-1 '>
             <hr className='border-2 border-gray-200' />
           </div>
 
           {/* arrange area */}
 
           <div>
-            <div className='mt-8 relative bottom-44'>
-              <h1 className='font-bold text-lg text-center pr-12 mb-2'>Rearrange Section</h1>
+            <div className='mt-8 '>
+              <h1 className='font-bold text-lg font-inter text-center w-40 mb-2'>Rearrange Section</h1>
 
-              <div className='grid grid-cols-2 gap-1 w-72 ml-20'>
+              <div className='grid grid-cols-2 gap-1 w-72 '>
 
 
                 <button className='px-1 py-2 border-2 border-gray-300 rounded-lg '>
@@ -254,22 +272,85 @@ function ResumeBuilder() {
                   <span className='text-xs font-bold '>Specialities</span>
                 </button>
 
-
-
               </div>
             </div>
           </div>
 
-          <div className=' w-72 ml-20 mt-1'>
-            <hr className=' py-2 border-2 border-gray-200' />
+          {/* horizonal line */}
+          <div className=' w-72 mt-8 '>
+            <hr className='border-2 border-gray-200' />
           </div>
+
+          {/* Personal info */}
+          <InputFieldDropdown
+            heading="Personal Information"
+            jobTitle="Job role"
+            firstName="First Name"
+            lastName="Last Name"
+            email="Email"
+            phoneNumber="Phone number"
+            city="City"
+            country="Country"
+          />
+
+          {/* professional summary */}
+          <SingleInputDropdown 
+            heading = "Professional Summary"
+            textAlign = " relative right-4"
+            text = "Summary"
+          />
+
+          {/* Employment History */}
+           <InputFieldDropdown 
+            heading = "Employment History"
+            jobTitle = "Job role"
+            firstName = "Employer"
+            lastName = "Years of work"      
+            city = "City"
+            hide = "true"
+          />  
+
+          {/* Education */}
+           <InputFieldDropdown 
+            heading = "Education Information"
+            jobTitle = "School"
+            firstName = "Degree"
+            lastName = "Year of completion"         
+            city = "City"
+            hide = "true"
+          />  
+
+           {/* social links */}
+           <SingleInputDropdown 
+            heading = "Website & Social Links"
+            textAlign = " relative right-5"
+            text = "@"
+          />
+
+            {/* hobbies */}
+            <SingleInputDropdown 
+            heading = "Hobbies"
+            textAlign = " relative right-16"
+            text = "enter your hobbies"
+          />
+
+           {/* awards */}
+           <SingleInputDropdown 
+            heading = "Hobbies"
+            textAlign = " relative right-16"
+            text = "enter your hobbies"
+          />
 
         </div>
 
+
+
+
+
         {/* center section */}
-        <div className='flex justify-center col-span-2 bg-gray-100'>
+        <div className='col-span-2 relative right-32  bg-gray-100'>
           <div className='mt-10'>
-            <img className='ml-9 shadow-lg w-11/12'
+            <img className='ml-6 shadow-lg w-11/12'
               src='https://resumeworded.com/assets/images/resume-guides/junior-data-scientist.png'
               alt='resume'
             />
@@ -281,60 +362,58 @@ function ResumeBuilder() {
             </div>
 
           </div>
-
-
         </div>
 
 
 
         {/* right section */}
-        <div className=''>
+        <div className='relative right-20'>
 
           {/* align area */}
-          <h1 className='text-start mt-3 font-bold mx-5'>
+          <h1 className='text-start mt-3 w-16 font-inter  font-bold mx-5'>
             Align
           </h1>
 
-          <div className='flex justify-center gap-6 mt-4 mr-10'>
+          <div className='flex justify-center ml-2 w-72 gap-3 mt-4 '>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faAlignLeft} />
+            <button className='text-gray-500 px-2 hover:text-blue-500'>
+              <CiAlignLeft size={20} />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faAlignCenter} />
+            <button className='text-gray-500 px-2 hover:text-blue-500'>
+              <CiAlignCenterH size={20} />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faAlignRight} />
+            <button className='text-gray-500 px-2 hover:text-blue-500'>
+              <CiAlignRight size={20} />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faAlignJustify} />
+            <button className='text-gray-500 px-2 hover:text-blue-500'>
+              <CiAlignTop size={20} />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faAlignLeft} />
+            <button className='text-gray-500 px-2 hover:text-blue-500'>
+              <CiAlignCenterV size={20} />
             </button>
 
-            <button>
-              <FontAwesomeIcon className="text-gray-500 px-2 hover:text-blue-500" icon={faChartSimple} />
+            <button className='text-gray-500 px-2 hover:text-blue-500'>
+              <CiAlignBottom size={20} />
             </button>
 
           </div>
 
           {/* horizontal line */}
-          <div className='w-11/12 mt-5'>
-            <hr className='ml-5 border-2 border-gray-200' />
+          <div className=' w-72 mt-5'>
+            <hr className=' ml-5 border-2 border-gray-200' />
           </div>
 
           {/* text area */}
           <div className='mt-8'>
-            <h1 className='text-start mt-3 font-bold mx-5'>
+            <h1 className='text-start font-inter mt-3 w-12 font-bold mx-5'>
               Text
             </h1>
 
-            <div className=' w-80 mt-4 ml-4 grid grid-cols-6 gap-3'>
+            <div className=' w-72 mt-4 ml-4 grid grid-cols-6  gap-3'>
 
               <button className='border-2 py-2 col-span-6 text-start border-gray-300 rounded-lg'>
                 <span className='mx-4 text-xs font-semibold'>Inter</span>
@@ -350,33 +429,31 @@ function ResumeBuilder() {
 
               <button className='border-2 col-span-3 py-2 text-start border-gray-300 rounded-lg'>
                 <FontAwesomeIcon className="text-gray-400 ml-4 " size='sm' icon={faI} />
-                <span className='mx-4 text-xs font-semibold'>150</span>
+                <span className='ml-3 text-xs font-semibold'>150</span>
                 <span className='text-gray-400 pl-10'>%</span>
               </button>
 
               <button className='border-2 py-2 col-span-3 text-start border-gray-300 rounded-lg'>
-                <span className='mx-4 text-xs font-semibold'>0</span>
-                <span className='text-gray-400 text-xs pl-20'>px</span>
+                <FontAwesomeIcon className="text-gray-400 ml-4 " size='sm' icon={faArrowsLeftRightToLine} />
+                <span className='ml-3 text-xs font-semibold'>0</span>
+                <span className='text-gray-400 text-xs ml-12'>px</span>
               </button>
 
             </div>
 
             {/* first set of align button */}
-            <div className='grid grid-cols-4 mt-2 border-2 w-80 border-gray-300 ml-4 py-2 rounded-lg'>
+            <div className='grid grid-cols-4 mt-2 border-2 w-58 border-gray-300 ml-4 py-2 rounded-lg'>
 
-              <button>
+              <button className=' border-r-2 border-gray-300'>
                 <FontAwesomeIcon className="text-gray-400 px-2 hover:text-blue-500" icon={faAlignLeft} />
-                <span className='text-gray-300 ml-10'>|</span>
               </button>
 
-              <button>
-                <FontAwesomeIcon className="text-gray-400 px-2 relative left-4 hover:text-blue-500" icon={faAlignCenter} />
-                <span className='text-gray-300 ml-10'>|</span>
+              <button className=' border-r-2 border-gray-300'>
+                <FontAwesomeIcon className="text-gray-400 px-2  hover:text-blue-500" icon={faAlignCenter} />
               </button>
 
-              <button>
-                <FontAwesomeIcon className="text-gray-400 px-2 relative left-4 hover:text-blue-500" icon={faAlignRight} />
-                <span className='text-gray-300 ml-10'>|</span>
+              <button className='border-r-2 border-gray-300'>
+                <FontAwesomeIcon className="text-gray-400 px-2 hover:text-blue-500" icon={faAlignRight} />
               </button>
 
               <button>
@@ -386,21 +463,19 @@ function ResumeBuilder() {
             </div>
 
             {/* second set of align button */}
-            <div className='grid grid-cols-4 mt-2 border-2 w-80 border-gray-300 ml-4 py-2 rounded-lg'>
+            <div className='grid grid-cols-4 mt-2 border-2 w-58 border-gray-300 ml-4 py-2 rounded-lg'>
 
-              <button className=''>
+              <button className='border-r-2 border-gray-300'>
                 <FontAwesomeIcon className="text-gray-400 px-2 hover:text-blue-500 " icon={faB} />
-                <span className='text-gray-300 ml-10'>|</span>
               </button>
 
-              <button>
-                <FontAwesomeIcon className="text-gray-400 px-2 relative left-4 hover:text-blue-500" icon={faI} />
-                <span className='text-gray-300 ml-10'>|</span>
+              <button className='border-r-2  border-gray-300'>
+
+                <FontAwesomeIcon className="text-gray-400 px-2  hover:text-blue-500" icon={faItalic} />
               </button>
 
-              <button>
-                <FontAwesomeIcon className="text-gray-400 px-2 relative left-4 hover:text-blue-500" icon={faU} />
-                <span className='text-gray-300 ml-10'>|</span>
+              <button className='border-r-2 border-gray-300'>
+                <FontAwesomeIcon className="text-gray-400 px-2  hover:text-blue-500" icon={faUnderline} />
               </button>
 
               <button>
@@ -410,25 +485,23 @@ function ResumeBuilder() {
             </div>
 
             {/* third set of button */}
-            <div className='grid grid-cols-4 mt-2 border-2 w-80 border-gray-300 ml-4 py-2 rounded-lg'>
+            <div className='grid grid-cols-4 mt-2 border-2 w-58 border-gray-300 ml-4 py-2 rounded-lg'>
 
-              <button>
-                <span className='text-gray-400'>-</span>
-                <span className='text-gray-300 ml-10'>|</span>
+              <button className='border-r-2 text-gray-400 text-center border-gray-300'>
+                <MdOutlineHorizontalRule style={{ position: 'relative', left: "25px" }} />
+                {/* <span className='text-gray-400 hover:text-blue-400'>-</span> */}
+              </button>
+
+              <button className='border-r-2 border-gray-300'>
+                <span className='text-gray-400 font-semibold hover:text-blue-400'>Ag</span>
+              </button>
+
+              <button className='border-r-2 border-gray-300'>
+                <span className='text-gray-400 font-semibold hover:text-blue-400'>ag</span>
               </button>
 
               <button>
-                <span className='text-gray-400 font-semibold'>Ag</span>
-                <span className='text-gray-300 ml-10'>|</span>
-              </button>
-
-              <button>
-                <span className='text-gray-400 font-semibold'>ag</span>
-                <span className='text-gray-300 ml-10'>|</span>
-              </button>
-
-              <button>
-                <span className='text-gray-400 font-semibold'>AG</span>
+                <span className='text-gray-400 font-semibold hover:text-blue-400'>AG</span>
               </button>
 
             </div>
@@ -436,18 +509,18 @@ function ResumeBuilder() {
           </div>
 
           {/* horizontal line */}
-          <div className=' w-11/12 mt-6'>
-            <hr className='ml-5 border-2 border-gray-200' />
+          <div className=' w-72 mt-5'>
+            <hr className=' ml-5 border-2 border-gray-200' />
           </div>
 
           {/* color area */}
 
           <div className='mt-8'>
-            <h1 className='text-start mt-3 font-bold mx-5'>
+            <h1 className='text-start font-inter mt-3 w-16 font-bold mx-5'>
               Color
             </h1>
 
-            <div className=' w-80 mt-4 ml-4 grid grid-cols-5 gap-3'>
+            <div className=' w-58 mt-4 ml-4 grid grid-cols-5 gap-3'>
 
               <button className='border-2 py-2 col-span-3 text-start border-gray-300 rounded-lg'>
                 <FontAwesomeIcon className="text-gray-800 ml-3" icon={faSquare} />
@@ -455,7 +528,7 @@ function ResumeBuilder() {
               </button>
 
               <button className='border-2 py-2 col-span-2 text-start border-gray-300 rounded-lg'>
-                <FontAwesomeIcon className="text-gray-400 px-2  hover:text-blue-500" icon={faArrowsToEye} />
+                <FontAwesomeIcon className="text-gray-400 px-2  hover:text-blue-500" icon={faEye} />
                 <span className='mx-4 text-xs font-semibold'>100%</span>
               </button>
 
@@ -464,42 +537,43 @@ function ResumeBuilder() {
           </div>
 
           {/* horizontal line */}
-          <div className=' w-11/12 mt-6'>
-            <hr className='ml-5 border-2 border-gray-200' />
+          <div className=' w-72 mt-5'>
+            <hr className=' ml-5 border-2 border-gray-200' />
           </div>
 
           {/* export area */}
 
           <div className='mt-8'>
-            <h1 className='text-start mt-3 font-bold mx-5'>
+            <h1 className='text-start mt-3 w-16  font-inter font-bold mx-5'>
               Export
             </h1>
 
-            <div className=' w-80 mt-4 ml-4 grid grid-cols-4 gap-3'>
+            <div className=' w-58 mt-4 ml-4 grid grid-cols-4 gap-3'>
 
               <button className='border-2 py-2 col-span-4 text-start border-gray-300 rounded-lg'>
                 <FontAwesomeIcon className="text-red-800 ml-3" icon={faFilePdf} />
                 <span className='mx-3 text-xs font-bold '>PDF</span>
-                <span className='text-xs text-gray-400 font-semibold relative left-48'>1,35Mb</span>
+                <span className='text-xs text-gray-400 font-semibold relative left-40'>1,35Mb</span>
               </button>
 
               <button className='border-2 py-2 col-span-4 text-start border-gray-300 rounded-lg'>
                 <FontAwesomeIcon className="text-blue-600 px-2  hover:text-blue-500" icon={faFileDownload} />
                 <span className='mx-3 text-xs font-bold'>DOC</span>
-                <span className='text-xs text-gray-400 font-semibold relative left-48'>756Kb</span>
+                <span className='text-xs text-gray-400 font-semibold relative left-40'>756Kb</span>
               </button>
 
             </div>
           </div>
 
           {/* horizontal line */}
-          <div className=' w-11/12 mt-6'>
-            <hr className='ml-5 border-2 border-gray-200' />
+          <div className=' w-72 mt-5'>
+            <hr className=' ml-5 border-2 border-gray-200' />
           </div>
 
         </div>
 
       </div>
+
     </div>
   )
 }

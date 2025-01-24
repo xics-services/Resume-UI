@@ -8,9 +8,10 @@ import ResumeBuilder from './pages/ResumeBuilder'
 const App = () => {
   return (
     <div>  
-   
+     
+    
      {/* <Home />  */}
-     <ResumeBuilder />
+     <ResumeBuilder /> 
     </div>
   )
 }

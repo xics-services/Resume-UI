@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        custom: [
-          "Heebo" , "sans-serif"
-        ],
+        Heebo: ["Heebo" , "sans-serif" ],
+        montserrat: ['Montserrat', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       }
     },
   },
